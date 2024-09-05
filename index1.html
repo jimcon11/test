@@ -91,7 +91,11 @@ cursor:default;
 color:white;
 }
 
-
+.nav {width: 23%;
+float: left;
+position:absolute;
+padding-left: 28px;
+padding-top: 37px;}
 
 .images {width: 68%;}
 
@@ -117,7 +121,7 @@ background-color:#14171a;
 ">
 
 
-<div w3-include-html="nav.html"></div>
+<div class="nav" w3-include-html="nav.html"></div>
 
 
 <div style="
@@ -224,24 +228,6 @@ onclick="plusDivs(+1)">
 </div> 
 
 
-
-
-<script>
-const getCellValue = (tr, idx) => tr.children[idx].innerText || tr.children[idx].textContent;
-
-const comparer = (idx, asc) => (a, b) => ((v1, v2) => 
-    v1 !== '' && v2 !== '' && !isNaN(v1) && !isNaN(v2) ? v1 - v2 : v1.toString().localeCompare(v2)
-    )(getCellValue(asc ? a : b, idx), getCellValue(asc ? b : a, idx));
-
-// do the work...
-document.querySelectorAll('th').forEach(th => th.addEventListener('click', (() => {
-    const table = th.closest('table');
-    Array.from(table.querySelectorAll('tr:nth-child(n+2)'))
-        .sort(comparer(Array.from(th.parentNode.children).indexOf(th), this.asc = !this.asc))
-        .forEach(tr => table.appendChild(tr) );
-})));
-
-</script>
 
 <script>
 var slideIndex = 1;
