@@ -113,6 +113,10 @@ font-size:16px;
 color: #dfdddd;
 }
 
+  #contact {
+  display: none;
+}
+
 
 </style>
 
@@ -165,7 +169,7 @@ onclick="plusDivs(+1)">
 >
 </span-->
 
-  <span style="position:absolute; left:60%; top:90px; right:18px; font-family: josefin sans, monospace; font-size:16px;  line-height: 1.1; text-align: justify; color:#dfdddd;">
+  <span style="position:absolute; left:60%; top:90px; right:18px; font-family: work sans, monospace; font-size:16px;  line-height: 1.1; text-align: justify; color:#dfdddd;">
   
   Upwards of 600 tri-axles haul stone daily from Savage Stone to highway projects within a 60-mile radius — one truck one per minute over a 10-hour day.<br><br>
    In 2024, a county zoning hearing found the quarry failed to meet its obligation to protect surrounding residential communities from adverse environmental effects.
@@ -177,6 +181,16 @@ onclick="plusDivs(+1)">
 
 <div style="position:absolute; top:110%;color:white;">&nbsp;<br>&nbsp;<br>&nbsp;<br></div>
 
+ <script>
+  function myFunction() {
+  var x = document.getElementById("contact");
+  if (x.style.display == "block") { // `=` to `==` or `===`
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+ </script>
 
 <script>
 var slideIndex = 1;
